@@ -5,6 +5,7 @@ using GalaSoft.MvvmLight;
 
 using Windows.Media.Core;
 using Windows.Media.Playback;
+using Windows.Media.Streaming.Adaptive;
 
 namespace TYT.Portal.ViewModels
 {
@@ -32,6 +33,8 @@ namespace TYT.Portal.ViewModels
         public MediaPlayerViewModel()
         {
             Source = MediaSource.CreateFromUri(new Uri(defaultSource));
+            //var _adaptive = AdaptiveMediaSource.CreateFromUriAsync(new Uri(defaultSource)).
+            //Source = MediaSource.CreateFromAdaptiveMediaSource(_adaptive.);
             PosterSource = defaultPoster;
         }
     }

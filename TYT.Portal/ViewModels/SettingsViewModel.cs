@@ -5,6 +5,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
 using TYT.Portal.Services;
+using TYT.Portal.Models;
 
 using Windows.ApplicationModel;
 
@@ -26,6 +27,19 @@ namespace TYT.Portal.ViewModels
             get { return _appDescription; }
             set { Set(ref _appDescription, value); }
         }
+
+        private string _powerPressKey;
+
+        public string PowerPressKey => AppSettings.PowerPressKey;
+        //{
+        //    get { return _powerPressKey; }
+        //    set { _powerPressKey = value; }
+        //}
+
+        public ISettings AppSettings => SettingsService.Settings;
+
+
+
 
         public ICommand SwitchThemeCommand { get; private set; }
 

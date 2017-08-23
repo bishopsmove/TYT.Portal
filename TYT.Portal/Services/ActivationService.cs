@@ -88,6 +88,7 @@ namespace TYT.Portal.Services
 
         private async Task InitializeAsync()
         {
+            await SettingsService.InitializeAsync();
             await Singleton<LiveTileService>.Instance.EnableQueueAsync();
             await Singleton<StoreNotificationsService>.Instance.InitializeAsync();
             Singleton<BackgroundTaskService>.Instance.RegisterBackgroundTasks();
