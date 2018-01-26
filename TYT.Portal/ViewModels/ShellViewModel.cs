@@ -161,10 +161,10 @@ namespace TYT.Portal.ViewModels
             // Or to use an IconElement instead of a Symbol see https://github.com/Microsoft/WindowsTemplateStudio/blob/master/docs/projectTypes/navigationpane.md
             // Edit String/en-US/Resources.resw: Add a menu item title for each page
             _primaryItems.Add(new ShellNavigationItem("Shell_Main".GetLocalized(), Symbol.Document, typeof(MainViewModel).FullName));
-            _primaryItems.Add(new ShellNavigationItem("Shell_MediaPlayer".GetLocalized(), Symbol.Document, typeof(MediaPlayerViewModel).FullName));
-            _primaryItems.Add(new ShellNavigationItem("Shell_ShowView".GetLocalized(), Symbol.Document, typeof(ShowViewViewModel).FullName));
+            _primaryItems.Add(new ShellNavigationItem("Shell_MediaPlayer".GetLocalized(), Symbol.Play, typeof(MediaPlayerViewModel).FullName));
+            _primaryItems.Add(new ShellNavigationItem("Shell_ShowView".GetLocalized(), Symbol.List, typeof(ShowViewViewModel).FullName));
             _primaryItems.Add(new ShellNavigationItem("Shell_ShowDetail".GetLocalized(), Symbol.Document, typeof(ShowDetailViewModel).FullName));
-            _primaryItems.Add(new ShellNavigationItem("Shell_Playlist".GetLocalized(), Symbol.Document, typeof(PlaylistViewModel).FullName));
+            _primaryItems.Add(new ShellNavigationItem("Shell_Playlist".GetLocalized(), Symbol.Audio, typeof(PlaylistViewModel).FullName));
             _secondaryItems.Add(new ShellNavigationItem("Shell_Settings".GetLocalized(), Symbol.Setting, typeof(SettingsViewModel).FullName));
         }
 

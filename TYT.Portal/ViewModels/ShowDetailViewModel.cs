@@ -30,8 +30,8 @@ namespace TYT.Portal.ViewModels
 
         private VisualState _currentState;
 
-        private Order _selected;
-        public Order Selected
+        private IEpisode _selected;
+        public IEpisode Selected
         {
             get { return _selected; }
             set { Set(ref _selected, value); }
@@ -40,7 +40,7 @@ namespace TYT.Portal.ViewModels
         public ICommand ItemClickCommand { get; private set; }
         public ICommand StateChangedCommand { get; private set; }
 
-        public ObservableCollection<Order> SampleItems { get; private set; } = new ObservableCollection<Order>();
+        public IChannel CurrentChannel { get; private set; } = new Channel();
 
         public ShowDetailViewModel()
         {
@@ -51,15 +51,15 @@ namespace TYT.Portal.ViewModels
         public async Task LoadDataAsync(VisualState currentState)
         {
             _currentState = currentState;
-            SampleItems.Clear();
+            CurrentChannel.EpisodeList.Clear();
 
             var data = await SampleDataService.GetSampleModelDataAsync();
 
             foreach (var item in data)
             {
-                SampleItems.Add(item);
+                CurrentChannel.EpisodeList.Add(item);
             }
-            Selected = SampleItems.First();
+            Selected = CurrentChannel.EpisodeList.First();
         }
 
         private void OnStateChanged(VisualStateChangedEventArgs args)
@@ -69,7 +69,7 @@ namespace TYT.Portal.ViewModels
 
         private void OnItemClick(ItemClickEventArgs args)
         {
-            Order item = args?.ClickedItem as Order;
+            IEpisode item = args?.ClickedItem as Episode;
             if (item != null)
             {
                 if (_currentState.Name == NarrowStateName)

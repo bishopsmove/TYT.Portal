@@ -11,12 +11,12 @@ namespace TYT.Portal.Services
     // TODO WTS: Delete this file once your app is using real data.
     public static class SampleDataService
     {
-        private static IEnumerable<Order> AllOrders()
+        private static IEnumerable<IEpisode> AllEpisodes()
         {
             // The following is order summary data
-            var data = new ObservableCollection<Order>
+            var data = new ObservableCollection<IEpisode>
             {
-                new Order
+                new Episode
                 {
                     OrderId = 70,
                     OrderDate = new DateTime(2017, 05, 24),
@@ -112,11 +112,11 @@ namespace TYT.Portal.Services
         }
 
         // TODO WTS: Remove this once your MasterDetail pages are displaying real data
-        public static async Task<IEnumerable<Order>> GetSampleModelDataAsync()
+        public static async Task<IEnumerable<IEpisode>> GetSampleModelDataAsync()
         {
             await Task.CompletedTask;
 
-            return AllOrders();
+            return AllEpisodes();
         }
     }
 }
