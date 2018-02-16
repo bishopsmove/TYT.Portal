@@ -15,6 +15,7 @@ namespace TYT.Portal.Models
         bool DownloadOnlyWhenAC_Connected { get; set; }
         bool StreamIfNotLocal { get; set; }
         string PowerPressKey { get; set; }
+        bool ToastOnAppEvents { get; set; }
 
         T GetValue<T>(string key, T defaultValue);
 

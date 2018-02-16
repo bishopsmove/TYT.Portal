@@ -7,8 +7,8 @@ using Windows.System.Threading;
 
 namespace TYT.Portal.BackgroundTasks
 {
-    // Audio Play Task
-    public sealed class BGTAudio : BackgroundTask
+    // Audio Download Task
+    public sealed class BGTFeedUpdate : BackgroundTask
     {
         public static string Message;
 

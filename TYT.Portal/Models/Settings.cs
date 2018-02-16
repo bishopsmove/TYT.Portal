@@ -12,6 +12,7 @@ namespace TYT.Portal.Models
 {
     public class Settings : ISettings
     {
+        // TODO: Add workflow for rating app (notification or modal based)
         const string _useRoamSettingsKey = "use-roam-settings";
         const string _themeKey = "Theme";
         const string _notifyOnAppEventsKey = "notify-on-app-events";
@@ -45,6 +46,7 @@ namespace TYT.Portal.Models
         public bool DownloadOnlyWhenAC_Connected { get => GetValue<bool>(_downloadOnlyWhenAC_Connected, false); set => SetValue(_downloadOnlyWhenAC_Connected, value); }
         public bool StreamIfNotLocal { get => GetValue<bool>(_streamIfNotLocal, true); set => SetValue(_streamIfNotLocal, value); }
         public string PowerPressKey { get => GetValue<string>(_powerPlayKey, string.Empty); set => SetValue(_powerPlayKey, value); }
+        public bool ToastOnAppEvents { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public T GetValue<T>(string key, T defaultValue)
         {

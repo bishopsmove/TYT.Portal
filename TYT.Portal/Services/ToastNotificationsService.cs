@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 using TYT.Portal.Activation;
@@ -12,6 +13,33 @@ namespace TYT.Portal.Services
         public void ShowToastNotification(ToastNotification toastNotification)
         {
             ToastNotificationManager.CreateToastNotifier().Show(toastNotification);
+        }
+
+        /// <summary>
+        /// Sends a toast notification
+        /// </summary>
+        /// <param name="msg">Message to send</param>
+        /// <param name="subMsg">Sub message</param>
+        public void ShowToast(string msg, string subMsg = null)
+        {
+            /*
+             * TODO: Fix this crap.
+            if (subMsg == null)
+                subMsg = GetMemoryUsageText();
+            */
+            Debug.WriteLine(msg + "\n" + subMsg);
+
+            if (!SettingsService.Settings.ToastOnAppEvents)
+                return;
+
+            //var toastXml = ToastNotificationsService.GetTemplateContent(ToastTemplateType.ToastText02);
+
+            //var toastTextElements = toastXml.GetElementsByTagName("text");
+            //toastTextElements[0].AppendChild(toastXml.CreateTextNode(msg));
+            //toastTextElements[1].AppendChild(toastXml.CreateTextNode(subMsg));
+
+            //var toast = new ToastNotification(toastXml);
+            //ShowToastNotification(toast);
         }
 
         protected override async Task HandleInternalAsync(ToastNotificationActivatedEventArgs args)

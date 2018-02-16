@@ -2,11 +2,11 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-
+using CommonServiceLocator;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
-using Microsoft.Practices.ServiceLocation;
+// using Microsoft.Practices.ServiceLocation;
 
 using TYT.Portal.Helpers;
 using TYT.Portal.Services;
@@ -30,7 +30,7 @@ namespace TYT.Portal.ViewModels
         {
             get
             {
-                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<NavigationServiceEx>();
+                return ServiceLocator.Current.GetInstance<NavigationServiceEx>();
             }
         }
 
@@ -160,7 +160,7 @@ namespace TYT.Portal.ViewModels
             // More on Segoe UI Symbol icons: https://docs.microsoft.com/windows/uwp/style/segoe-ui-symbol-font
             // Or to use an IconElement instead of a Symbol see https://github.com/Microsoft/WindowsTemplateStudio/blob/master/docs/projectTypes/navigationpane.md
             // Edit String/en-US/Resources.resw: Add a menu item title for each page
-            _primaryItems.Add(new ShellNavigationItem("Shell_Main".GetLocalized(), Symbol.Document, typeof(MainViewModel).FullName));
+            _primaryItems.Add(new ShellNavigationItem("Shell_Main".GetLocalized(), Symbol.Home, typeof(MainViewModel).FullName));
             _primaryItems.Add(new ShellNavigationItem("Shell_MediaPlayer".GetLocalized(), Symbol.Play, typeof(MediaPlayerViewModel).FullName));
             _primaryItems.Add(new ShellNavigationItem("Shell_ShowView".GetLocalized(), Symbol.List, typeof(ShowViewViewModel).FullName));
             _primaryItems.Add(new ShellNavigationItem("Shell_ShowDetail".GetLocalized(), Symbol.Document, typeof(ShowDetailViewModel).FullName));

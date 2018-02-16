@@ -1,3 +1,4 @@
+using CommonServiceLocator;
 using System;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace TYT.Portal.Activation
         {
             get
             {
-                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<NavigationServiceEx>();
+                return ServiceLocator.Current.GetInstance<NavigationServiceEx>();
             }
         }
     

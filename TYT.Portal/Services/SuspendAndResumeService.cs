@@ -1,7 +1,8 @@
+using CommonServiceLocator;
 using System;
 using System.Threading.Tasks;
 
-using Microsoft.Practices.ServiceLocation;
+// using Microsoft..Practices.ServiceLocation;
 
 using TYT.Portal.Activation;
 using TYT.Portal.Helpers;

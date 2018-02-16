@@ -61,12 +61,10 @@ namespace TYT.Portal.Services
 
         private static IEnumerable<BackgroundTask> CreateInstances()
         {
-            var backgroundTasks = new List<BackgroundTask>();
+            BackgroundTask[] tasks = { new BGTAudio(), new BGTDownload(), new BGTFeedUpdate() };
 
-            backgroundTasks.Add(new BGTAudio());
-        
-            backgroundTasks.Add(new BGTDownload());
-        
+            var backgroundTasks = new List<BackgroundTask>(tasks);
+                    
             return backgroundTasks;
         }
     }
