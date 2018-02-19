@@ -155,7 +155,7 @@ namespace TYT.Portal
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
-            Helpers.Singleton<ToastNotificationsService>.Instance.ShowToast("Finished reducing memory usage");
+            // Helpers.Singleton<ToastNotificationsService>.Instance.ShowToast("Finished reducing memory usage");
         }
 
         

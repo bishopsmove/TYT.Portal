@@ -1,6 +1,6 @@
 using System;
 using System.Windows.Input;
-
+using CommonServiceLocator;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
@@ -18,7 +18,7 @@ namespace TYT.Portal.ViewModels
         {
             get
             {
-                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<NavigationServiceEx>();
+                return ServiceLocator.Current.GetInstance<NavigationServiceEx>();
             }
         }
         const string NarrowStateName = "NarrowState";
@@ -26,8 +26,8 @@ namespace TYT.Portal.ViewModels
 
         public ICommand StateChangedCommand { get; private set; }
 
-        private Order _item;
-        public Order Item
+        private Episode _item;
+        public Episode Item
         {
             get { return _item; }
             set { Set(ref _item, value); }

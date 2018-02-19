@@ -15,7 +15,7 @@
 
         <TextBlock
             x:Name="TitlePage"
-            Text="{x:Bind MasterMenuItem.OrderId, Mode=OneWay}"
+            Text="{x:Bind MasterMenuItem.Title, Mode=OneWay}"
             Style="{StaticResource PageTitleStyle}" />
 
         <ScrollViewer
@@ -29,16 +29,16 @@
             
                 <!--Replate this StackPanel with your detail content.-->
                 <StackPanel Orientation="Vertical" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
-                    <TextBlock Text="Order Date" Style="{StaticResource CaptionTextBlockStyle}" />
-                    <TextBlock Text="{x:Bind MasterMenuItem.OrderDate, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
-                    <TextBlock Text="Company" Style="{StaticResource CaptionTextBlockStyle}" />
-                    <TextBlock Text="{x:Bind MasterMenuItem.Company, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
-                    <TextBlock Text="Ship to" Style="{StaticResource CaptionTextBlockStyle}" />
-                    <TextBlock Text="{x:Bind MasterMenuItem.ShipTo, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
-                    <TextBlock Text="Order Total" Style="{StaticResource CaptionTextBlockStyle}" />
-                    <TextBlock Text="{x:Bind MasterMenuItem.OrderTotal, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
-                    <TextBlock Text="Status" Style="{StaticResource CaptionTextBlockStyle}" />
-                    <TextBlock Text="{x:Bind MasterMenuItem.Status, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
+                    <TextBlock Text="ID" Style="{StaticResource CaptionTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.PostId, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
+                    <TextBlock Text="Date" Style="{StaticResource CaptionTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.PublishDate, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
+                    <TextBlock Text="Duration" Style="{StaticResource CaptionTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.Duration, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
+                    <TextBlock Text="Image" Style="{StaticResource CaptionTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.ImageUrl, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
+                    <TextBlock Text="Description" Style="{StaticResource CaptionTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.Description, Mode=OneWay}" Style="{StaticResource BodyTextStyle}" />
                 </StackPanel>
             </Grid>
         </ScrollViewer>

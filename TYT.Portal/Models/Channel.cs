@@ -9,13 +9,13 @@ namespace TYT.Portal.Models
 {
     public class Channel : IChannel
     {
-        public string Title { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string SubTitle { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Link { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Category { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Rating { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Language { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public ObservableCollection<IEpisode> EpisodeList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Title { get; set; }
+        public string SubTitle { get; set; }
+        public string Link { get; set; }
+        public string Description { get; set; }
+        public string Category { get; set; }
+        public string Rating { get; set; }
+        public string Language { get; set; }
+        public ObservableCollection<IEpisode> EpisodeList { get; set; }
     }
 }

@@ -16,7 +16,7 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TYT.Portal.App">
       <uap:VisualElements DisplayName="TYT.Portal" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="TYT.Portal" BackgroundColor="transparent">
-        <uap:LockScreen Notification="" BadgeLogo="Assets\TYTseal_logo_200x200.png" />
+        <uap:LockScreen Notification="badge" BadgeLogo="Assets\TYTseal_logo_200x200.png" />
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />

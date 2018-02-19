@@ -51,7 +51,15 @@ namespace TYT.Portal.ViewModels
         public async Task LoadDataAsync(VisualState currentState)
         {
             _currentState = currentState;
-            CurrentChannel.EpisodeList.Clear();
+            if (CurrentChannel.EpisodeList == null)
+            {
+                CurrentChannel.EpisodeList = new ObservableCollection<IEpisode>();
+            }
+            else
+            {
+                CurrentChannel.EpisodeList.Clear();
+            }
+            
 
             var data = await SampleDataService.GetSampleModelDataAsync();
 

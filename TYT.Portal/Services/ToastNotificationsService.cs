@@ -29,7 +29,7 @@ namespace TYT.Portal.Services
             */
             Debug.WriteLine(msg + "\n" + subMsg);
 
-            if (!SettingsService.Settings.ToastOnAppEvents)
+            if (!SettingsService.Settings.NotifyOnAppEvents)
                 return;
 
             //var toastXml = ToastNotificationsService.GetTemplateContent(ToastTemplateType.ToastText02);

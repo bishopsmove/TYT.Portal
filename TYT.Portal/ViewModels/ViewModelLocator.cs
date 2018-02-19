@@ -1,6 +1,5 @@
+using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
-
-using Microsoft.Practices.ServiceLocation;
 
 using TYT.Portal.Services;
 using TYT.Portal.Views;

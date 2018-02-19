@@ -16,7 +16,7 @@
         </TransitionCollection>
     </Page.Transitions>
     <Page.Resources>
-        <DataTemplate x:Key="MasterListViewItemTemplate" x:DataType="model:Order">
+        <DataTemplate x:Key="MasterListViewItemTemplate" x:DataType="model:Episode">
             <Grid Margin="{StaticResource MediumLeftTopRightBottomMargin}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -24,12 +24,12 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock 
-                    Text="{x:Bind OrderId}" 
+                    Text="{x:Bind Title}" 
                     Style="{StaticResource ListTitleStyle}" />
 
                 <TextBlock
                     Grid.Row="1"
-                    Text="{x:Bind Company}"
+                    Text="{x:Bind Duration}"
                     Style="{StaticResource ListSubTitleStyle}" />
             </Grid>
         </DataTemplate>
@@ -74,7 +74,7 @@
             <ListView
                 x:Name="MasterListView"
                 Grid.Row="1"
-                ItemsSource="{x:Bind ViewModel.SampleItems, Mode=OneWay}"
+                ItemsSource="{x:Bind ViewModel.CurrentChannel.EpisodeList, Mode=OneWay}"
                 SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
                 ItemContainerTransitions="{x:Null}"
                 ItemTemplate="{StaticResource MasterListViewItemTemplate}"

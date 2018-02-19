@@ -46,7 +46,6 @@ namespace TYT.Portal.Models
         public bool DownloadOnlyWhenAC_Connected { get => GetValue<bool>(_downloadOnlyWhenAC_Connected, false); set => SetValue(_downloadOnlyWhenAC_Connected, value); }
         public bool StreamIfNotLocal { get => GetValue<bool>(_streamIfNotLocal, true); set => SetValue(_streamIfNotLocal, value); }
         public string PowerPressKey { get => GetValue<string>(_powerPlayKey, string.Empty); set => SetValue(_powerPlayKey, value); }
-        public bool ToastOnAppEvents { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public T GetValue<T>(string key, T defaultValue)
         {

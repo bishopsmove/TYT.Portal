@@ -7,13 +7,13 @@ namespace TYT.Portal.Views
 {
     public sealed partial class ShowDetailDetailControl : UserControl
     {
-        public Order MasterMenuItem
+        public IEpisode MasterMenuItem
         {
-            get { return GetValue(MasterMenuItemProperty) as Order; }
+            get { return GetValue(MasterMenuItemProperty) as IEpisode; }
             set { SetValue(MasterMenuItemProperty, value); }
         }
 
-        public static DependencyProperty MasterMenuItemProperty = DependencyProperty.Register("MasterMenuItem",typeof(Order),typeof(ShowDetailDetailControl),new PropertyMetadata(null));
+        public static DependencyProperty MasterMenuItemProperty = DependencyProperty.Register("MasterMenuItem",typeof(IEpisode),typeof(ShowDetailDetailControl),new PropertyMetadata(null));
 
         public ShowDetailDetailControl()
         {

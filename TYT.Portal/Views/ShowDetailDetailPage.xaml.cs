@@ -21,7 +21,7 @@ namespace TYT.Portal.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            ViewModel.Item = e.Parameter as Order;
+            ViewModel.Item = e.Parameter as Episode;
         }
     }
 }
