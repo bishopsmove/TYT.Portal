@@ -135,6 +135,7 @@
     <Compile Include="Helpers\TaskExtensions.cs" />
     <Compile Include="Models\Channel.cs" />
     <Compile Include="Models\Episode.cs" />
+    <Compile Include="Models\Feed.cs" />
     <Compile Include="Models\IChannel.cs" />
     <Compile Include="Models\IEpisode.cs" />
     <Compile Include="Models\IMediaFile.cs" />

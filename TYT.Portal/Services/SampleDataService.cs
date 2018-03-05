@@ -119,5 +119,77 @@ namespace TYT.Portal.Services
 
             return AllEpisodes();
         }
+
+        public static Feed GetFeed()
+        {
+            var data = new Feed
+            {
+                AllChannels = new List<Channel>
+                {
+                    new Channel
+                    {
+                        Title = "The Young Turks Show",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/tytaudio/"
+                    },
+                    new Channel
+                    {
+                        Title = "TYT Old School",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/tyt-old-school-podcast-audio/"
+                    },
+                    new Channel
+                    {
+                        Title = "Aggressive Progressives",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/apaudio/"
+                    },
+                    new Channel
+                    {
+                        Title = "The News with Dan Rather",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/the-news-with-dan-rather-podcast-audio/"
+                    },
+                    new Channel
+                    {
+                        Title = "Rebel Headquarters",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/rebel-headquarters-podcast-audio/"
+                    },
+                    new Channel
+                    {
+                        Title = "Reporting In",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/reporting-in-podcast-audio"
+                    },
+                    new Channel
+                    {
+                        Title = "Murder With Friends",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/murder-with-friends/"
+                    },
+                    new Channel
+                    {
+                        Title = "What The Flick?",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/wtfaudio/"
+                    },
+                    new Channel
+                    {
+                        Title = "Nerd Alert",
+                        Link = "https://tytnetwork.com/podcast.php/5096-317ec0df4149c7221b95f664aa72a4fe/feed/nerd-alert-podcast-audio/"
+                    },
+                    new Channel
+                    {
+                        Title = "TYT Interviews",
+                        Link = "https://tytnetwork.com/feed/tytinterviewsaudio/"
+                    },
+                    new Channel
+                    {
+                        Title = "The Young Turks - FREE (Audio)",
+                        Link = "http://tytnetworkpodcast.com/rss"
+                    },
+                    new Channel
+                    {
+                        Title = "TYT Old School - FREE",
+                        Link = "http://tytoldschool.tyt.libsynpro.com/tytoldschool"
+                    }
+                }
+            };
+
+            return data;
+        }
     }
 }
